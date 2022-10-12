@@ -36,6 +36,7 @@ public class AppTest {
 	 */
 	@Test
 	public void test003() {
+		
 		Logger logger = LoggerFactory.getLogger(AppTest.class);
 		try {
 			Class.forName("aaa");

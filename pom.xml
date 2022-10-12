@@ -10,23 +10,66 @@
 
 	<properties>
 		<junit.version>4.12</junit.version>
-		<slf4j.version>[1.7.7,2.0.0)</slf4j.version>
 	</properties>
 
 	<dependencies>
+
 		<!-- slf4j 核心依赖 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j.version}</version>
+			<version>1.7.25</version>
 		</dependency>
-		<!-- slf4j 自带的简单的日志实现 -->
+
+		<!-- log4j 桥接 logback -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>${slf4j.version}</version>
-			<scope>test</scope>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>1.7.25</version>
 		</dependency>
+
+		<!-- slf4j nop 依赖 -->
+		<!-- <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>2.0.3</version>
+		</dependency> -->
+
+		<!-- slf4j 自带的简单的日志实现 -->
+		<!-- <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.25</version>
+			<scope>test</scope>
+		</dependency> -->
+
+		<!-- logback 依赖 -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+
+		<!-- 导入log4j适配器依赖 -->
+		<!-- <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.25</version>
+		</dependency> -->
+		<!-- 导入log4j依赖 -->
+		<!-- <dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency> -->
+
+		<!-- 导入JUL适配器依赖 -->
+		<!-- <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>1.7.25</version>
+		</dependency> -->
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
